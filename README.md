@@ -2,20 +2,22 @@
 
 How to download, build and hack WebRTC
 
-$ git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+$ git clone https://github.com/maojie/depot_tools.git
+
+$ export DEPOT_TOOLS_UPDATE=0
 
 $ mkdir -p webrtc/src
 
 $ cd webrtc/src
 
-$ git clone https://github/maojie/webrtc.git
+$ git clone https://github.com/maojie/webrtc.git
 
 $ cd ../
 
 $ vi .gclient # Paste the following item
 solutions = [
   {
-    "url": "https://webrtc.googlesource.com/src.git",
+    "url": "https://github.com/maojie/webrtc.git",
     "managed": False,
     "name": "src",
     "deps_file": "DEPS",
