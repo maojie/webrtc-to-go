@@ -6,15 +6,14 @@ $ git clone https://github.com/maojie/depot_tools.git
 
 $ export DEPOT_TOOLS_UPDATE=0
 
-$ mkdir -p webrtc/src
+$ mkdir -p webrtc
 
-$ cd webrtc/src
+$ cd webrtc/
 
-$ git clone https://github.com/maojie/webrtc.git
-
-$ cd ../
+$ git clone https://github.com/maojie/webrtc.git src
 
 $ vi .gclient # Paste the following item
+
 solutions = [
   {
     "url": "https://github.com/maojie/webrtc.git",
