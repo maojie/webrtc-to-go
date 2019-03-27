@@ -94,7 +94,7 @@ $ export DEPOT_TOOLS_UPDATE=0
 $ mkdir -p webrtc
 $ cd webrtc/
 $ git clone https://github.com/[username]/webrtc.git src
-$ vi .gclient # Paste the following item
+$ vi .gclient # Paste the following content
 solutions = [
   {
     "url": "https://github.com/[username]/webrtc.git",
@@ -104,6 +104,9 @@ solutions = [
     "custom_deps": {},
   },
 ]
+$ vi src/DEPS # Modify the following lines
+Replace 'https://chromium.googlesource.com' to 'ssh://[username]@[x.x.x.x]:[port]'
+Replace 'https://boringssl.googlesource.com' to 'ssh://[username]@[x.x.x.x]:[port]'
 $ gclient sync --nohooks --verbose
 ```
 
